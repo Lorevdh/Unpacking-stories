@@ -20,6 +20,8 @@
 
     "guess_title": "Where do you think I’m from?",
     "guess_correct": "Yes, that’s right! I’m from {country}.",
-    "guess_wrong": "Not quite. I’m actually from {country}."
+    "guess_wrong": "Not quite. I’m actually from {country}.",
+    "score_label": "Score"
+
   }
 }

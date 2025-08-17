@@ -49,33 +49,50 @@ h1 {
     margin-top: 20px;
 }
 
-/* De doos (achtergrond) */
-
+/* De doos (achtergrond voor items) */
 #itemList {
     position: relative;
-    width: 550px;   /* groter gemaakt */
+    width: 550px;
     height: 550px;
     margin: 20px auto;
     background: url('/assets/images/box.png') no-repeat center;
     background-size: contain;
 }
 
-
 .item {
-    position: absolute; /* belangrijk: plaats items met x,y */
+    position: absolute;
 }
 
+/* Item-afbeeldingen */
 .item-image {
     width: 100px;
     height: auto;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
 }
 
+/* Hover effect */
 .item-image:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Speciale kleinere items (zoals schelpen) */
+.item-image.item-small {
+    width: 70px;
+}
+
+/* Locked items (nog niet gevonden) */
+.item.locked img {
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+
+/* Gevonden items */
+.item.found img {
+    opacity: 1;
+    filter: none;
 }
 
 /* Dialoog */
@@ -96,6 +113,8 @@ h1 {
 .hidden {
     display: none;
 }
+
+/* Guess section */
 #guessSection {
     margin-top: 20px;
 }
@@ -113,22 +132,4 @@ h1 {
 
 .guess-btn:hover {
     background-color: #556b2f;
-}
-/* Items */
-.item-image {
-    width: 100px;
-    height: auto;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.item-image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Speciale kleinere items, zoals schelpen */
-.item-image.item-small {
-    width: 70px;  /* kleiner formaat */
 }
