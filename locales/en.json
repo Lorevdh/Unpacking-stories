@@ -1,13 +1,25 @@
 {
-    "en": {
-        "leila_photo": "We didn’t take many photos that day. I still regret it.",
-        "leila_spice": "Masala chai is a ritual. No two mornings taste the same.",
-        "leila_notebook": "When I was young, I wrote stories about birds that couldn’t fly.",
-        "thiago_toy": "It smells like the garage where my dad fixed bikes.",
-        "thiago_photo": "I miss that summer. It felt like magic.",
-        "thiago_mango": "Oh no. Not again.",
-        "priya_photo": "We didn’t take many photos that day. I still regret it.",
-        "priya_spice": "Chai, like my grandmother made it, is my therapy.",
-        "priya_notebook": "I still write stories about the birds. It’s a habit."
-    }
+  "en": {
+    "leila_mint": "My grandmother dried mint on the windowsill.",
+    "leila_tajine": "The clay always cracks, but the food tastes like home.",
+    "leila_necklace": "A gift from my cousin. She swore it would keep away the evil eye.",
+    "leila_novel": "I practiced reading this when I was little.",
+    "leila_seashells": "Collected near Tangier… I almost lost them in the move.",
+
+    "thiago_toy": "It smells like the garage where my dad fixed bikes.",
+    "thiago_football": "Every corner in my neighborhood was a football field.",
+    "thiago_mango": "Oh no. Not again.",
+    "thiago_whistle": "When I blow this, I hear the whole street moving.",
+    "thiago_flipflops": "Cheap ones, but they’re part of every summer memory.",
+
+    "priya_photo": "We didn’t take many photos that day. I still regret it.",
+    "priya_spice": "Masala chai is a ritual. No two mornings taste the same.",
+    "priya_notebook": "I wrote stories about birds that couldn’t fly.",
+    "priya_cassette": "I listened to this with my sister, singing too loudly.",
+    "priya_lamp": "Every Diwali, we polished it until it shone.",
+
+    "guess_title": "Where do you think I’m from?",
+    "guess_correct": "Yes, that’s right! I’m from {country}.",
+    "guess_wrong": "Not quite. I’m actually from {country}."
+  }
 }

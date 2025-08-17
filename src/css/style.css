@@ -50,14 +50,16 @@ h1 {
 }
 
 /* De doos (achtergrond) */
+
 #itemList {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 550px;   /* groter gemaakt */
+    height: 550px;
     margin: 20px auto;
     background: url('/assets/images/box.png') no-repeat center;
     background-size: contain;
 }
+
 
 .item {
     position: absolute; /* belangrijk: plaats items met x,y */
@@ -93,4 +95,40 @@ h1 {
 /* Verborgen elementen */
 .hidden {
     display: none;
+}
+#guessSection {
+    margin-top: 20px;
+}
+
+.guess-btn {
+    background-color: #6b8e23;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.guess-btn:hover {
+    background-color: #556b2f;
+}
+/* Items */
+.item-image {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Speciale kleinere items, zoals schelpen */
+.item-image.item-small {
+    width: 70px;  /* kleiner formaat */
 }
