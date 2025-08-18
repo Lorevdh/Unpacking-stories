@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const boxWidth  = itemListDiv.offsetWidth;
     const boxHeight = itemListDiv.offsetHeight;
-    const innerBoxSize = Math.min(boxWidth, boxHeight) * 0.50;
+    const innerBoxSize = Math.min(boxWidth, boxHeight) * 0.5;
     const innerX = (boxWidth  - innerBoxSize) / 2;
     const innerY = (boxHeight - innerBoxSize) / 2;
     const scaleX = innerBoxSize / 300;
