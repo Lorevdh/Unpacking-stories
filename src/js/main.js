@@ -71,17 +71,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   init();
 
-  async function init() {
-    await loadI18n();
-    characterSelectionButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        const selectedKey = e.target.id.replace('Box', '').toLowerCase();
-        currentCharacter = characters[selectedKey];
-        itemsFound = 0;
-        foundItems.clear();
-        showItems(currentCharacter);
-      });
+async function init() {
+  await loadI18n();
+  characterSelectionButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      characterSelectionButtons.forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+
+      const selectedKey = e.target.id.replace('Box', '').toLowerCase();
+      currentCharacter = characters[selectedKey];
+      itemsFound = 0;
+      foundItems.clear();
+      showItems(currentCharacter);
+
+      document.getElementById('currentCharacterTitle').textContent =
+        `${currentCharacter.name}’s Box`;
+
+      const guessInput = document.getElementById('guessInput');
+      if (guessInput) {
+        guessInput.value = '';
+        guessInput.focus();
+      }
     });
+  });
+
+
+
   }
 
   function showItems(character) {
@@ -110,11 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
       img.classList.add('item-image');
       if (item.small) img.classList.add('item-small');
 
-      // Position
       itemDiv.style.left = (innerX + (item.x * scaleX) + offsetX) + 'px';
       itemDiv.style.top  = (innerY + (item.y * scaleY) + offsetY) + 'px';
 
-      // Unlock on click
       img.addEventListener('click', () => {
         if (!foundItems.has(item.name)) {
           foundItems.add(item.name);
@@ -128,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             guessSection.classList.remove('hidden');
           }
         } else {
-          // Already found → just show again
+         
           showDialogue(item.dialogueKey);
         }
       });
@@ -146,16 +159,32 @@ document.addEventListener('DOMContentLoaded', () => {
     dialogueDiv.classList.remove('hidden');
   }
 
-  // Guess buttons
-  document.querySelectorAll('.guess-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (!currentCharacter) return;
-      const chosen = btn.getAttribute('data-country');
-      const msg = (chosen === currentCharacter.origin)
-        ? (t('guess_correct') || "Yes, that’s right! I’m from {country}.")
-        : (t('guess_wrong')   || "Not quite. I’m actually from {country}.");
-      dialogueDiv.textContent = msg.replace('{country}', currentCharacter.origin);
-      dialogueDiv.classList.remove('hidden');
-    });
-  });
+// Guess via input
+const guessInput = document.getElementById('guessInput');
+const submitGuess = document.getElementById('submitGuess');
+
+submitGuess.addEventListener('click', () => {
+  if (!currentCharacter) return;
+  const chosen = guessInput.value.trim();
+  if (!chosen) return;
+
+  const chosenLower = chosen.toLowerCase();
+  const originLower = currentCharacter.origin.toLowerCase();
+
+  const msg = (chosenLower === originLower)
+    ? (t('guess_correct') || "Yes, that’s right! I’m from {country}.")
+    : (t('guess_wrong')   || "Not quite. I’m actually from {country}.");
+
+  dialogueDiv.textContent = msg.replace('{country}', currentCharacter.origin);
+  dialogueDiv.classList.remove('hidden');
 });
+
+
+guessInput.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {
+    submitGuess.click();
+  }
+});
+
+  });
+

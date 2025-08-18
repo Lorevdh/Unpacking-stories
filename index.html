@@ -20,19 +20,22 @@
     <button id="thiagoBox">Thiago’s Box</button>
     <button id="priyaBox">Priya’s Box</button>
   </div>
-
+<div id="currentCharacterTitle"></div>
   <div id="itemSelection">
     <div id="itemList"></div>
   </div>
 
   <div id="dialogue" class="hidden"></div>
 
-  <div id="guessSection" class="hidden">
-    <p id="guessPrompt"></p>
-    <button class="guess-btn" data-country="Morocco">Morocco</button>
-    <button class="guess-btn" data-country="Brazil">Brazil</button>
-    <button class="guess-btn" data-country="India">India</button>
+ <div id="guessSection" class="hidden">
+  <p id="guessPrompt"></p>
+
+  <div id="guessInputWrapper">
+    <input type="text" id="guessInput" placeholder="Type the country...">
+    <button id="submitGuess">Submit</button>
   </div>
+</div>
+
     <script src="src/js/main.js"></script>
 </body>
 </html>

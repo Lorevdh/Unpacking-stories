@@ -1,5 +1,15 @@
 {
   "en": {
+    "instruction": "Click a friend's box, flip one or more cards to hear their stories, then guess where they’re from. Earlier guesses earn more points. Wrong guesses cost points.",
+    "guess_title": "Where do you think I’m from?",
+    "points_hint": "Tip: guessing after 1, 2, 3, 4, 5+ hints gives ≈ 20, 14, 9, 5, 3 points.",
+    "guess_correct": "Yes, that’s right! I’m from {country}.",
+    "guess_wrong": "Not quite. I’m actually from {country}.",
+    "pick_another": "Pick another friend to continue.",
+    "final_title": "All friends solved!",
+    "final_score": "Your final score: {score}",
+    "play_again": "Play Again",
+
     "leila_mint": "My grandmother dried mint on the windowsill.",
     "leila_tajine": "The clay always cracks, but the food tastes like home.",
     "leila_necklace": "A gift from my cousin. She swore it would keep away the evil eye.",
@@ -16,12 +26,6 @@
     "priya_spice": "Masala chai is a ritual. No two mornings taste the same.",
     "priya_notebook": "I wrote stories about birds that couldn’t fly.",
     "priya_cassette": "I listened to this with my sister, singing too loudly.",
-    "priya_lamp": "Every Diwali, we polished it until it shone.",
-
-    "guess_title": "Where do you think I’m from?",
-    "guess_correct": "Yes, that’s right! I’m from {country}.",
-    "guess_wrong": "Not quite. I’m actually from {country}.",
-    "score_label": "Score"
-
+    "priya_lamp": "Every Diwali, we polished it until it shone."
   }
 }
