@@ -55,9 +55,10 @@ h1 {
     width: 450px;
     height: 450px;
     margin: 20px auto;
-    background: url('/assets/images/box.png') no-repeat center;
+    background: url('../../assets/images/box.png') no-repeat center;
     background-size: contain;
 }
+
 
 .item {
     position: absolute;
